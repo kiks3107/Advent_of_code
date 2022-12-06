@@ -7,6 +7,9 @@ int main() {
 	string myText;
 	int num;
 	int i = 0;
+	int First = 0;
+	int Second = 0;
+	int Third = 0;
 	int Elves[251];
 
 	Elves[i] = 0;
@@ -27,14 +30,32 @@ int main() {
 			Elves[i] = 0;
 		}
 	}
-	for (i = 1; i < 251; ++i) {
+	for (i = 0; i < 251; ++i) {
 
 		// Change < to > if you want to find the smallest element
-		if (Elves[0] < Elves[i])
-			Elves[0] = Elves[i];
+		if (First < Elves[i])
+			First = Elves[i],
+			num = i;
 	}
+	cout << "Elf With the highest amount is elf number " << num << " with " << First << endl;
+	for (i = 0; i < 251; ++i) {
 
-	cout << Elves[0];
+		// Change < to > if you want to find the smallest element
+		if (Second < Elves[i] and First > Elves[i])
+			Second = Elves[i],
+			num = i;
+	}
+	cout << "Elf With the second highest amount is elf number " << num << " with " << Second << endl;
+	for (i = 0; i < 251; ++i) {
+
+		// Change < to > if you want to find the smallest element
+		if (Third < Elves[i] and Second > Elves[i])
+			Third = Elves[i],
+			num = i;
+	}
+	cout << "Elf With the third highest amount is elf number " << num << " with " << Third << endl;
+
+	cout << "With a collective total of " << First + Second + Third;
 	// Close the file
 	MyFile.close();
 }
