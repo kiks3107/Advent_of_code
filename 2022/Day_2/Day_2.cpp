@@ -12,52 +12,49 @@ int main() {
 
 	while (getline(MyFile, myText)) {
 		// Output the text from the file
-		if (myText[2] == 'X')
+		if (myText[0] == 'A')
 		{
-			Score += 1;
-			if (myText[0] == 'A')
+			if (myText[2] == 'X')
 			{
 				Score += 3;
 			}
-			else if (myText[0] == 'B')
+			else if (myText[2] == 'Y')
 			{
-				Score += 0;
+				Score += 4;
 			}
-			else if (myText[0] == 'C')
+			else if (myText[2] == 'Z')
 			{
-				Score += 6;
+				Score += 8;
 			}
 		}
-		else if (myText[2] == 'Y')
+		else if (myText[0] == 'B')
 		{
-			Score += 2;
-			if (myText[0] == 'A')
+			if (myText[2] == 'X')
 			{
-				Score += 6;
+				Score += 1;
 			}
-			else if (myText[0] == 'B')
+			else if (myText[2] == 'Y')
 			{
-				Score += 3;
+				Score += 5;
 			}
-			else if (myText[0] == 'C')
+			else if (myText[2] == 'Z')
 			{
-				Score += 0;
+				Score += 9;
 			}
 		}
-		else if (myText[2] == 'Z')
+		else if (myText[0] == 'C')
 		{
-			Score += 3;
-			if (myText[0] == 'A')
+			if (myText[2] == 'X')
 			{
-				Score += 0;
+				Score += 2;
 			}
-			else if (myText[0] == 'B')
+			else if (myText[2] == 'Y')
 			{
 				Score += 6;
 			}
-			else if (myText[0] == 'C')
+			else if (myText[2] == 'Z')
 			{
-				Score += 3;
+				Score += 7;
 			}
 		}
 	}
